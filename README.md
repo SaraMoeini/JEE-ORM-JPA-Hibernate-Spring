@@ -26,6 +26,7 @@ JEE-ORM-JPA-Hibernate-Spring
         Des vues JSP
 ****************************************************
 ##create project => spring starter project(springboot) => +mysql +JPA
+
 #Branch1
 creation des Entitees 
 puis application.properties  
