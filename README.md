@@ -36,4 +36,22 @@ implementation dao
 
 #Branch2
 SpringDate 
+branch2
+#############################################
+J'ai cree Entity
+J'ai cree  une interface 
+et l'implementation de cette interface
+__________________________________________
 
+Mais springdata a deja fait tout ca, alors maintenant : 
+supprime => l'implemantation , l'interface generic
+il reste que l'entite
+
+on va creer une interface "ProduitRepository" pour gerer les produit 
+qui herit de l'interface cree par spring => JpaRepository
+
+Je n'ai plus besoin de creer une class d'implementation => Spring a deja fait
+
+pour ajouter les methodes qui n'existe pas j'utilise @Query({HQL Requete}) avant method 
+
+J'ai fait assosiation ManyToOne/OneToMany entre Produit et categorie
