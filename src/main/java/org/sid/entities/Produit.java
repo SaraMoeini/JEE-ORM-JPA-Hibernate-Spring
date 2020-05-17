@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Produit implements Serializable{
@@ -16,7 +18,29 @@ public class Produit implements Serializable{
 	private String designation;
 	private double prix;
 	private int quantite;
+	//un produit appartient a une categorie
+	@ManyToOne
+	@JoinColumn(name="ID_CAT")	//cle etrangere
+	private Categorie categorie;
 	
+	
+	
+	public Produit(String designation, double prix, int quantite, Categorie categorie) {
+		super();
+		this.designation = designation;
+		this.prix = prix;
+		this.quantite = quantite;
+		this.categorie = categorie;
+	}
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+
 	public Produit() {
 	}
 
